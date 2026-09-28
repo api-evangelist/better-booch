@@ -1,23 +1,56 @@
 aid: better-booch
 name: Better Booch
-description: 'Better Booch is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://betterbooch.com/cdn/shop/files/Copy_of_BetterBooch_Logo_Stacked_Horizontal_Black_V1_532x266.png?v=1636060843
+description: Better Booch is a premium small craft kombucha brand based in Los Angeles, CA. Their organic, canned kombucha is brewed with naturally-occurring
+  probiotics, botanicals, herbs, and adaptogens, delivering a flavorful, health‑supporting beverage. Available at over 5,000 retailers nationwide,
+  Better Booch emphasizes sustainability, quality ingredients, and innovative flavors, positioning itself as a leader in the craft kombucha market.
 url: https://raw.githubusercontent.com/api-evangelist/better-booch/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-28'
 modified: '2026-09-28'
 tags:
 - Company
-apis: []
+- Beverage
+- Kombucha
+- Health
+- Organic
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/better-booch-llms.txt
+- type: WellKnown
+  url: well-known/better-booch-well-known.yml
+- type: Hosts
+  url: hosts/better-booch-hosts.yml
+- type: Vendors
+  url: vendors/better-booch-vendors.yml
+- type: TermsOfService
+  url: https://betterbooch.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://betterbooch.com/policies/privacy-policy
+- type: Newsroom
+  url: https://betterbooch.com/pages/press
+- type: DomainSecurity
+  url: security/better-booch-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://betterbooch.com
+apis:
+- name: Better Booch GraphQL API
+  description: GraphQL API for Better Booch e‑commerce store
+  humanURL: https://betterbooch.com
+  baseURL: https://betterbooch.com/api/graphql
+  aid: better-booch:better-booch-graphql-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
